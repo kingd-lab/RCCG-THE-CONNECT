@@ -1,0 +1,18 @@
+
+# Create Project
+npx create-next-app@latest church-platform
+
+# Enter Project
+cd church-platform
+
+# Install Dependencies
+npm install framer-motion lucide-react react-icons
+
+# Run Development
+npm run dev
+
+# Production Build
+npm run build
+
+# Start Production Server
+npm start

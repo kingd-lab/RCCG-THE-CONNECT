@@ -1,0 +1,1085 @@
+@import "tailwindcss";
+
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#050505;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+/* CONTAINER */
+
+.container{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  background:rgba(5,5,5,0.78);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.nav-content{
+  height:82px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-img{
+  width:80px;
+  height:100px;
+
+  object-fit:contain;
+
+  background:black;
+
+  mix-blend-mode:lighten;
+}
+
+.logo{
+  color:#8bffb0;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  max-width:140px;
+
+  line-height:1.1;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.nav-links a,
+.dropdown-btn{
+  color:#d1d5db;
+  transition:0.3s;
+}
+
+.nav-links a:hover,
+.dropdown-btn:hover{
+  color:#8bffb0;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown-content{
+  position:absolute;
+  top:42px;
+  left:0;
+
+  min-width:220px;
+
+  background:#0d0d0d;
+
+  border:1px solid #1f2937;
+
+  border-radius:20px;
+
+  padding:14px;
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:0.35s ease;
+}
+
+.dropdown:hover .dropdown-content{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+/* BUTTONS */
+
+.btn-primary{
+  background:#8bffb0;
+  color:black;
+
+  padding:16px 34px;
+
+  border-radius:14px;
+
+  font-weight:700;
+
+  transition:0.3s;
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.15);
+
+  padding:16px 34px;
+
+  border-radius:14px;
+}
+
+.give-btn{
+  background:#8bffb0;
+  color:black;
+
+  padding:12px 22px;
+
+  border-radius:14px;
+
+  font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  overflow:hidden;
+
+  padding:120px 20px 80px;
+}
+
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background-image:url("/church-hero.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  animation:heroMove 18s ease-in-out infinite alternate;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,0.62);
+}
+
+@keyframes heroMove{
+
+  0%{
+    transform:scale(1);
+  }
+
+  100%{
+    transform:scale(1.05) translateX(-20px);
+  }
+
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  max-width:900px;
+}
+
+.hero-badge{
+  display:inline-block;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:rgba(139,255,176,0.1);
+
+  border:1px solid rgba(139,255,176,0.2);
+
+  color:#8bffb0;
+
+  margin-bottom:24px;
+}
+
+.hero-content h1{
+  font-size:82px;
+  line-height:1.05;
+  margin-bottom:24px;
+}
+
+.hero-content span{
+  color:#8bffb0;
+}
+
+.hero-content p{
+  color:#d1d5db;
+
+  font-size:20px;
+
+  line-height:1.8;
+
+  margin-bottom:40px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* SECTION */
+
+.section{
+  padding:120px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.section-title h2{
+  font-size:56px;
+  margin-bottom:16px;
+}
+
+.section-title p{
+  color:#9ca3af;
+
+  max-width:700px;
+
+  margin:auto;
+
+  line-height:1.8;
+}
+
+/* MINISTRY */
+
+.ministry-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.ministry-card{
+  background:#0d0d0d;
+
+  border:1px solid #1f2937;
+
+  padding:30px;
+
+  border-radius:28px;
+
+  transition:0.4s;
+}
+
+.ministry-card:hover{
+  transform:translateY(-8px);
+
+  border-color:#8bffb0;
+}
+
+.card-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:24px;
+}
+
+.ministry-card h3{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.ministry-card p{
+  color:#9ca3af;
+  line-height:1.8;
+}
+
+/* GALLERY */
+
+.home-gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.home-gallery-item{
+  overflow:hidden;
+
+  border-radius:28px;
+
+  height:320px;
+
+  border:1px solid #1f2937;
+}
+
+.home-gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:0.8s;
+}
+
+.home-gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+/* EVENTS */
+
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.event-card{
+  background:#0d0d0d;
+
+  border:1px solid #1f2937;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  transition:0.4s;
+}
+
+.event-card:hover{
+  transform:translateY(-8px);
+
+  border-color:#8bffb0;
+}
+
+.event-image-wrap{
+  height:260px;
+  overflow:hidden;
+}
+
+.event-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:0.7s;
+}
+
+.event-card:hover .event-image{
+  transform:scale(1.08);
+}
+
+.event-content{
+  padding:32px;
+}
+
+.event-date{
+  color:#8bffb0;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.event-content h3{
+  font-size:28px;
+
+  margin-top:16px;
+
+  margin-bottom:18px;
+}
+
+.event-content p{
+  color:#9ca3af;
+
+  line-height:1.8;
+}
+
+.event-btn{
+  margin-top:28px;
+}
+
+/* FOOTER */
+
+.footer{
+  background:#020202;
+
+  border-top:1px solid #1f2937;
+
+  padding:90px 20px 30px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+.footer h3{
+  color:#8bffb0;
+  margin-bottom:20px;
+}
+
+.footer p,
+.footer li{
+  color:#9ca3af;
+  line-height:2;
+}
+
+.footer ul{
+  list-style:none;
+}
+
+.footer-bottom{
+  margin-top:50px;
+
+  border-top:1px solid #1f2937;
+
+  padding-top:25px;
+
+  text-align:center;
+
+  color:#6b7280;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero-content h1{
+    font-size:52px;
+  }
+
+  .ministry-grid,
+  .home-gallery-grid,
+  .event-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .logo{
+    font-size:11px;
+    max-width:75px;
+  }
+
+  .logo-img{
+    width:34px;
+    height:34px;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .section-title h2{
+    font-size:38px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+}
+/* =========================
+   NAV RIGHT
+========================= */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.menu-btn{
+  display:none;
+
+  width:46px;
+  height:46px;
+
+  background:#111111;
+
+  color:#8bffb0;
+
+  border:none;
+
+  border-radius:12px;
+
+  font-size:24px;
+
+  cursor:pointer;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu{
+  position:absolute;
+
+  top:82px;
+  left:0;
+
+  width:100%;
+
+  background:#050505;
+
+  border-bottom:1px solid #1f2937;
+
+  padding:24px;
+
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(-20px);
+
+  transition:0.35s ease;
+
+  z-index:999;
+}
+
+.mobile-menu a{
+  color:white;
+
+  font-size:16px;
+
+  transition:0.3s ease;
+}
+
+.mobile-menu a:hover{
+  color:#8bffb0;
+}
+
+.show-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+/* =========================
+   DROPDOWN FIX
+========================= */
+
+.dropdown-content a{
+  padding:12px 14px;
+
+  border-radius:12px;
+
+  color:#d1d5db;
+
+  transition:0.3s ease;
+}
+
+.dropdown-content a:hover{
+  background:#111827;
+
+  color:#8bffb0;
+}
+
+/* =========================
+   FIX MINISTRIES / EVENTS / BLOG
+========================= */
+
+.ministry-card,
+.event-card,
+.blog-card{
+  position:relative;
+}
+
+.ministry-card h3,
+.event-content h3,
+.blog-content h3{
+  color:white;
+}
+
+.ministry-card p,
+.event-content p,
+.blog-content p{
+  color:#9ca3af;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .mobile-menu{
+    display:flex;
+  }
+
+}
+
+@media(min-width:993px){
+
+  .mobile-menu{
+    display:none;
+  }
+
+}
+/* ======================
+   SERMONS PAGE
+====================== */
+
+.sermons-page{
+  background:#050505;/* =========================
+   SERMONS PAGE
+========================= */
+
+.sermons-page{
+  min-height:100vh;
+  background:#050505;
+  color:white;
+}
+
+/* HERO */
+
+.sermons-hero{
+  text-align:center;
+  padding:140px 20px 80px;
+}
+
+.sermons-hero h1{
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  color:#50f186;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.sermons-hero p{
+  max-width:700px;
+  margin:auto;
+  color:#bdbdbd;
+  line-height:1.8;
+}
+
+/* SECTION */
+
+.sermons-section,
+.podcast-section{
+  max-width:1200px;
+  margin:auto;
+  padding:20px 20px 80px;
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:30px;
+  color:#50f186;
+}
+
+/* GRID */
+
+.sermons-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+
+.sermon-card{
+  background:#111111;
+  border:1px solid rgba(98, 235, 159, 0.2);
+  border-radius:24px;
+  padding:25px;
+  transition:.3s ease;
+}
+
+.sermon-card:hover{
+  transform:translateY(-6px);
+  border-color:#58f7c7;
+}
+
+.sermon-tag{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:30px;
+  background:rgba(64, 245, 154, 0.15);
+  color:#57f8ba;
+  font-size:.8rem;
+  margin-bottom:12px;
+}
+
+.sermon-card h3{
+  font-size:1.4rem;
+  margin-bottom:10px;
+}
+
+.sermon-card p{
+  color:#9FE870;
+  margin-bottom:5px;
+}
+
+.sermon-card small{
+  color:#888;
+}
+
+/* AUDIO */
+
+.sermon-audio,
+.podcast-audio{
+  width:100%;
+  margin-top:20px;
+}
+
+/* BUTTONS */
+
+.sermon-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.download-btn{
+  padding:12px 18px;
+  border-radius:12px;
+  background:#59e7ac;
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.download-btn:hover{
+  background:#57f09c;
+}
+
+.youtube-btn{
+  padding:12px 18px;
+  border-radius:12px;
+  border:1px solid #53f0c9;
+  color:#59f3a6;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.youtube-btn:hover{
+  background:#52e4a0;
+  color:black;
+}
+
+/* PODCAST */
+
+.podcast-card{
+  background:#111111;
+  border:1px solid rgba(83, 247, 170, 0.2);
+  border-radius:24px;
+  padding:30px;
+}
+
+.podcast-card h3{
+  margin-bottom:10px;
+}
+
+.podcast-card p{
+  color:#bdbdbd;
+  margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .sermons-hero{
+    padding-top:110px;
+  }
+
+  .section-title{
+    font-size:1.6rem;
+  }
+
+  .sermons-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sermon-actions{
+    flex-direction:column;
+  }
+
+  .download-btn,
+  .youtube-btn{
+    width:100%;
+    text-align:center;
+  }
+
+}
+  color:white;
+  min-height:100vh;
+}
+
+.sermons-hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+
+.sermons-hero h1{
+  font-size:4rem;
+  font-weight:800;
+  color:#57eb99;
+}
+
+.sermons-hero p{
+  max-width:700px;
+  margin:auto;
+  color:#bdbdbd;
+}
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section h2{
+  font-size:2rem;
+  margin-bottom:30px;
+  color:#57eca7;
+}
+
+.sermons-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+.sermon-card{
+  background:#111;
+  border:1px solid rgba(72, 236, 154, 0.3);
+  border-radius:20px;
+  padding:25px;
+  transition:.3s;
+}
+
+.sermon-card:hover{
+  transform:translateY(-6px);
+  border-color:#52ec97;
+}
+
+.sermon-card h3{
+  margin-bottom:10px;
+}
+
+.sermon-card span{
+  display:block;
+  color:#59eba2;
+  margin-bottom:8px;
+}
+
+.sermon-card small{
+  display:block;
+  color:#888;
+  margin-bottom:15px;
+}
+
+.sermon-card audio{
+  width:100%;
+}
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  gap:25px;
+}
+
+.video-grid iframe{
+  width:100%;
+  height:280px;
+  border:none;
+  border-radius:20px;
+}
+
+.podcast-card{
+  background:#111;
+  border:1px solid rgba(88, 235, 120, 0.3);
+  border-radius:10px;
+  padding:30px;
+}
+
+.podcast-card h3{
+  color:#50f186;
+  margin-bottom:10px;
+}
+
+.podcast-card p{
+  color:#bbb;
+  margin-bottom:20px;
+}
+
+.podcast-card audio{
+  width:100%;
+}
+
+@media(max-width:768px){
+
+  .sermons-hero{
+    padding-top:110px;
+  }
+
+  .sermons-hero h1{
+    font-size:2.5rem;
+  }
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .video-grid iframe{
+    height:220px;
+  }
+
+}
+/* =====================================================
+   FINAL LOGO SIZE
+===================================================== */
+
+.logo-img {
+  width: 120px !important;
+  height: 100px !important;
+  max-width: none !important;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* MOBILE LOGO */
+
+@media (max-width: 600px) {
+
+  .logo-img {
+    width: 100px !important;
+    height: 80px !important;
+    max-width: none !important;
+  }
+
+  .logo {
+    font-size: 15px;
+    max-width: 120px;
+  }
+
+}
+.logo-img {
+  width: 120px !important;
+  height: 100px !important;
+  max-width: none !important;
+
+  object-fit: contain;
+
+  transform: scale(1.25);
+  transform-origin: center;
+
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+
+  .logo-img {
+    width: 100px !important;
+    height: 90px !important;
+
+    transform: scale(1.2);
+  }
+
+}
