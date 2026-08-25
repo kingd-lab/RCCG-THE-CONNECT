@@ -1028,8 +1028,8 @@ img{
 ===================================================== */
 
 .logo-img {
-  width: 120px !important;
-  height: 100px !important;
+  width: 100px !important;
+  height: 80px !important;
   max-width: none !important;
 
   object-fit: contain;
@@ -1050,8 +1050,8 @@ img{
 @media (max-width: 600px) {
 
   .logo-img {
-    width: 100px !important;
-    height: 80px !important;
+    width: 90px !important;
+    height: 70px !important;
     max-width: none !important;
   }
 
@@ -1062,8 +1062,8 @@ img{
 
 }
 .logo-img {
-  width: 120px !important;
-  height: 100px !important;
+  width: 100px !important;
+  height: 90px !important;
   max-width: none !important;
 
   object-fit: contain;
@@ -1076,8 +1076,8 @@ img{
 @media (max-width: 600px) {
 
   .logo-img {
-    width: 100px !important;
-    height: 90px !important;
+    width: 90px !important;
+    height: 80px !important;
 
     transform: scale(1.2);
   }
