@@ -1,42 +1,53 @@
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
-  title: "Church Website",
-  description: "Modern Church Website",
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://rccg-the-connect-sjcs.vercel.app"
+  ),
+
+  title: "RCCG The Connect",
+
+  description: "",
+
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
+  openGraph: {
+    title: "RCCG The Connect",
+    description: "",
+    url: "https://rccg-the-connect-sjcs.vercel.app",
+    siteName: "RCCG The Connect",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "RCCG The Connect",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "RCCG The Connect",
+    description: "",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-
-      <head>
-
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-
-      </head>
-
-      <body>
-        {children}
-      </body>
-
+      <body>{children}</body>
     </html>
   );
 }
