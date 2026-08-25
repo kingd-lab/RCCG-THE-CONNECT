@@ -1083,3 +1083,94 @@ img{
   }
 
 }
+/* =====================================================
+   LOGO + NAVBAR SIZE
+===================================================== */
+
+/* DESKTOP / SYSTEM */
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 95px !important;
+  height: 60px !important;
+  max-width: none !important;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo {
+  color: #8bffb0;
+  font-size: 18px;
+  font-weight: 700;
+  max-width: 160px;
+  line-height: 1.1;
+}
+
+.nav-content {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu {
+  top: 78px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .logo-img {
+    width: 82px !important;
+    height: 54px !important;
+  }
+
+  .logo {
+    font-size: 16px;
+    max-width: 140px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .nav-content {
+    height: 68px;
+  }
+
+  .logo-wrap {
+    gap: 8px;
+  }
+
+  .logo-img {
+    width: 68px !important;
+    height: 44px !important;
+    max-width: none !important;
+    object-fit: contain;
+  }
+
+  .logo {
+    font-size: 13px;
+    max-width: 105px;
+    line-height: 1.1;
+  }
+
+  .mobile-menu {
+    top: 68px;
+  }
+
+}
