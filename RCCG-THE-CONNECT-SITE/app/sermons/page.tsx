@@ -3,7 +3,7 @@ export default function SermonsPage() {
     {
       id: 1,
       title: "Walking By Faith",
-      speaker: "Pastor David Omosehin",
+      speaker: "Pastor Emmanuel",
       date: "June 1, 2026",
       audio: "/sermons/walking-by-faith.mp3",
       youtube: "https://youtube.com",
@@ -11,7 +11,7 @@ export default function SermonsPage() {
     {
       id: 2,
       title: "The Power Of Prayer",
-      speaker: "Pastor David Omosehin",
+      speaker: "Pastor Emmanuel",
       date: "May 25, 2026",
       audio: "/sermons/power-of-prayer.mp3",
       youtube: "https://youtube.com",
@@ -19,7 +19,7 @@ export default function SermonsPage() {
     {
       id: 3,
       title: "Living In God's Purpose",
-      speaker: "Pastor David Omosehin",
+      speaker: "Pastor Emmanuel",
       date: "May 18, 2026",
       audio: "/sermons/gods-purpose.mp3",
       youtube: "https://youtube.com",
@@ -57,13 +57,9 @@ export default function SermonsPage() {
 
                 <h3>{sermon.title}</h3>
 
-                <p>
-                  {sermon.speaker}
-                </p>
+                <p>{sermon.speaker}</p>
 
-                <small>
-                  {sermon.date}
-                </small>
+                <small>{sermon.date}</small>
 
               </div>
 
@@ -87,6 +83,7 @@ export default function SermonsPage() {
                 <a
                   href={sermon.youtube}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="youtube-btn"
                 >
                   Watch Online
@@ -138,3 +135,5 @@ export default function SermonsPage() {
     </main>
   );
 }
+
+
