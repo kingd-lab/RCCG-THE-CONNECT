@@ -1,43 +1,11 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://rccg-the-connect-sjcs.vercel.app"
-  ),
-
-  title: "RCCG The Connect",
-
-  description: "",
-
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
-
-  openGraph: {
-    title: "RCCG The Connect",
-    description: "",
-    url: "https://rccg-the-connect-sjcs.vercel.app",
-    siteName: "RCCG The Connect",
-    images: [
-      {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: "RCCG The Connect",
-      },
-    ],
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary",
-    title: "RCCG The Connect",
-    description: "",
-    images: ["/logo.png"],
-  },
+  title: "The Connect Church",
+  description: "RCCG The Connect Church",
 };
 
 export default function RootLayout({
@@ -47,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
+
