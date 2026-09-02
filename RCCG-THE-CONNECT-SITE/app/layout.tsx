@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Church Website",
-  description: "Modern Church Website",
+  title: "RCCG THE CONNECT",
+  description: "The Connect Church Website",
 };
 
 export default function RootLayout({
