@@ -41,17 +41,17 @@ export default function Navbar() {
 
             <div className="dropdown-content">
 
-              <a href="#">
+              <Link href="/about#vision">
                 Our Vision
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link href="/about#leadership">
                 Leadership
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link href="/about#mission">
                 Mission
-              </a>
+              </Link>
 
             </div>
 
@@ -65,9 +65,9 @@ export default function Navbar() {
 
             <div className="dropdown-content">
 
-              <a href="/sermons">
+              <Link href="/sermons">
                 Latest Sermons
-              </a>
+              </Link>
 
             </div>
 
@@ -85,29 +85,29 @@ export default function Navbar() {
                 Church Chronicles
               </Link>
 
-              <a href="/blog">
+              <Link href="/blog">
                 Devotionals
-              </a>
+              </Link>
 
-              <a href="/blog">
+              <Link href="/blog">
                 Testimonies
-              </a>
+              </Link>
 
             </div>
 
           </div>
 
-          <a href="#ministries">
+          <Link href="/#ministries">
             Ministries
-          </a>
+          </Link>
 
-          <a href="#events">
+          <Link href="/events">
             Events
-          </a>
+          </Link>
 
-          <a href="#footer">
+          <Link href="/#footer">
             Contact
-          </a>
+          </Link>
 
         </div>
 
@@ -137,25 +137,29 @@ export default function Navbar() {
           Home
         </Link>
 
-        <a href="#sermons">
+        <Link href="/about">
+          About
+        </Link>
+
+        <Link href="/sermons">
           Sermons
-        </a>
+        </Link>
 
-        <a href="#ministries">
+        <Link href="/#ministries">
           Ministries
-        </a>
+        </Link>
 
-        <a href="#events">
+        <Link href="/events">
           Events
-        </a>
+        </Link>
 
         <Link href="/blog">
           Blog
         </Link>
 
-        <a href="#footer">
+        <Link href="/#footer">
           Contact
-        </a>
+        </Link>
 
       </div>
 
