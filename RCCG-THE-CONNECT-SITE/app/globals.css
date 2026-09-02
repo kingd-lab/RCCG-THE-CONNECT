@@ -2050,3 +2050,458 @@ button {
     transform: translateY(0);
   }
 }
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(159, 232, 112, 0.12);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 82px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.church-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.church-logo-mark {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #9fe870;
+  border-radius: 50%;
+  color: #9fe870;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.church-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.church-logo-text span {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.church-logo-text small {
+  margin-top: 5px;
+  color: #9fe870;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link,
+.nav-dropdown-button {
+  color: #d4d4d4;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-dropdown-button:hover {
+  color: #9fe870;
+}
+
+.nav-dropdown {
+  position: relative;
+  height: 82px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 70px;
+  left: -20px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(15, 15, 15, 0.98);
+  border: 1px solid rgba(159, 232, 112, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  padding: 11px 13px;
+  border-radius: 9px;
+  color: #bdbdbd;
+  font-size: 13px;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(159, 232, 112, 0.1);
+  color: #9fe870;
+}
+
+.mobile-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #9fe870;
+  background: transparent;
+  border: 1px solid rgba(159, 232, 112, 0.25);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =====================================================
+   ABOUT + SERMONS COMING SOON
+   ===================================================== */
+
+.simple-page,
+.sermons-page {
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  padding-top: 82px;
+}
+
+.simple-page-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.simple-page-hero h1 {
+  margin: 15px 0 20px;
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.simple-page-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #a8a8a8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #9fe870;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.sermons-coming-soon {
+  min-height: calc(100vh - 82px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.coming-soon-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(159, 232, 112, 0.3);
+  border-radius: 50%;
+  background: rgba(159, 232, 112, 0.08);
+  font-size: 32px;
+  animation: sermonPulse 2.5s ease-in-out infinite;
+}
+
+.sermons-coming-soon h1 {
+  margin: 15px 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  color: #9fe870;
+  font-weight: 800;
+}
+
+.sermons-coming-soon p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #a8a8a8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.coming-soon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.coming-soon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: #9fe870;
+  color: #050505;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.coming-soon-btn:hover {
+  transform: translateY(-3px);
+  background: #b6f58f;
+}
+
+.coming-soon-btn.secondary {
+  background: transparent;
+  color: #9fe870;
+  border: 1px solid rgba(159, 232, 112, 0.5);
+}
+
+.coming-soon-btn.secondary:hover {
+  background: rgba(159, 232, 112, 0.08);
+}
+
+@keyframes sermonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(159, 232, 112, 0);
+  }
+
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 35px rgba(159, 232, 112, 0.12);
+  }
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .navbar-container {
+    height: 72px;
+    padding: 0 16px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 20px;
+    background: rgba(5, 5, 5, 0.98);
+    border-top: 1px solid rgba(159, 232, 112, 0.08);
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    animation: mobileMenuIn 0.25s ease;
+  }
+
+  .mobile-nav > a,
+  .mobile-sermons-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 10px;
+    color: #d4d4d4;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: left;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease;
+  }
+
+  .mobile-nav > a:hover,
+  .mobile-sermons-button:hover {
+    color: #9fe870;
+    background: rgba(159, 232, 112, 0.08);
+  }
+
+  .mobile-sermons-button {
+    justify-content: space-between;
+  }
+
+  .mobile-sermons-button > span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-sermons-submenu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5px 30px;
+    border-left: 1px solid rgba(159, 232, 112, 0.2);
+  }
+
+  .mobile-sermons-submenu a {
+    padding: 11px 15px;
+    color: #999;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+
+  .mobile-sermons-submenu a:hover {
+    color: #9fe870;
+  }
+
+  .rotate-arrow {
+    transform: rotate(180deg);
+  }
+
+  .church-logo-text span {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .church-logo-text small {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .church-logo-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .simple-page,
+  .sermons-page {
+    padding-top: 72px;
+  }
+
+  .simple-page-hero {
+    padding: 90px 20px;
+  }
+
+  .sermons-coming-soon {
+    min-height: calc(100vh - 72px);
+    padding: 80px 20px;
+  }
+
+  .sermons-coming-soon h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .sermons-coming-soon p {
+    font-size: 0.95rem;
+  }
+
+  .coming-soon-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .coming-soon-btn {
+    width: 100%;
+  }
+}
+
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
