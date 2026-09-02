@@ -169,7 +169,7 @@ export default function BlogPage() {
                     marginBottom: "16px",
                   }}
                 >
-                  Growing Together in Christ
+                The call to purity
                 </h3>
 
                 <p
@@ -179,14 +179,19 @@ export default function BlogPage() {
                     marginBottom: "24px",
                   }}
                 >
-                  Discover how fellowship strengthens faith,
-                  unity and spiritual accountability.
+                 Purity…
+                  They say it is old-fashioned.
+                   They say it is for another generation,
+                    for another era,
+                     for people who do not understand “real life.”
                 </p>
 
-                <button className="btn-primary">
-                  Read More
-                </button>
-
+                  <Link
+                     href="/blog/the-call-to-purity"
+                     className="btn-primary read-more-btn"
+                        >
+                          Read More
+                            </Link>
               </div>
 
             </div>
