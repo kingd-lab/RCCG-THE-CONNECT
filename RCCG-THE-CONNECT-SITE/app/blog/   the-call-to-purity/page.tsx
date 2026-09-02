@@ -40,7 +40,7 @@ export default function ArticlePage() {
               <div className="full-article-image-wrap">
 
                 <img
-                  src="/purity.jpg"
+                  src="/blog2.jpg"
                   alt="The Call to Purity"
                   className="full-article-image"
                 />
