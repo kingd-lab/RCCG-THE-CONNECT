@@ -30,7 +30,7 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar />
-        <main className="pt-20">{children}</main>
+        {children}
       </body>
     </html>
   );
