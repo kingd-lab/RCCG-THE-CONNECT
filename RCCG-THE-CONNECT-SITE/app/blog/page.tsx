@@ -159,7 +159,7 @@ export default function BlogPage() {
                     fontWeight: "700",
                   }}
                 >
-                  Community
+                Prophetic Spoken Word
                 </span>
 
                 <h3
