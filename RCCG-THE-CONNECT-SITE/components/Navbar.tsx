@@ -7,6 +7,7 @@ import {
   X,
   ChevronDown,
   Home,
+  Info,
   Headphones,
   BookOpen,
   Users,
@@ -26,7 +27,6 @@ export default function Navbar() {
   return (
     <header className="site-navbar">
       <div className="navbar-container">
-
         <Link href="/" onClick={closeMobileMenu} className="church-logo">
           <div className="church-logo-mark">C</div>
 
@@ -36,11 +36,22 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* DESKTOP NAVIGATION */}
         <nav className="desktop-nav">
-          <Link href="/" className="nav-link">Home</Link>
+          <Link href="/" className="nav-link">
+            Home
+          </Link>
+
+          <Link href="/about" className="nav-link">
+            About
+          </Link>
 
           <div className="nav-dropdown">
-            <button className="nav-dropdown-button">
+            <button
+              type="button"
+              className="nav-dropdown-button"
+              aria-label="Open Sermons menu"
+            >
               Sermons
               <ChevronDown size={16} />
             </button>
@@ -52,37 +63,58 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/blog" className="nav-link">Blog</Link>
-          <Link href="/ministries" className="nav-link">Ministries</Link>
-          <Link href="/events" className="nav-link">Events</Link>
-          <Link href="/contact" className="nav-link">Contact</Link>
+          <Link href="/blog" className="nav-link">
+            Blog
+          </Link>
+
+          <Link href="/ministries" className="nav-link">
+            Ministries
+          </Link>
+
+          <Link href="/events" className="nav-link">
+            Events
+          </Link>
+
+          <Link href="/contact" className="nav-link">
+            Contact
+          </Link>
         </nav>
 
+        {/* MOBILE MENU BUTTON */}
         <button
+          type="button"
           className="mobile-menu-button"
           onClick={() => setMobileMenu(!mobileMenu)}
           aria-label="Toggle navigation"
+          aria-expanded={mobileMenu}
         >
           {mobileMenu ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
+      {/* MOBILE NAVIGATION */}
       {mobileMenu && (
         <div className="mobile-nav">
-
           <Link href="/" onClick={closeMobileMenu}>
             <Home size={18} />
-            Home
+            <span>Home</span>
+          </Link>
+
+          <Link href="/about" onClick={closeMobileMenu}>
+            <Info size={18} />
+            <span>About</span>
           </Link>
 
           <div className="mobile-sermons">
             <button
+              type="button"
               className="mobile-sermons-button"
               onClick={() => setSermonMenu(!sermonMenu)}
+              aria-expanded={sermonMenu}
             >
               <span>
                 <Headphones size={18} />
-                Sermons
+                <span>Sermons</span>
               </span>
 
               <ChevronDown
@@ -96,9 +128,11 @@ export default function Navbar() {
                 <Link href="/sermons" onClick={closeMobileMenu}>
                   Latest Sermons
                 </Link>
+
                 <Link href="/sermons" onClick={closeMobileMenu}>
                   Watch Online
                 </Link>
+
                 <Link href="/sermons" onClick={closeMobileMenu}>
                   Podcast
                 </Link>
@@ -108,27 +142,46 @@ export default function Navbar() {
 
           <Link href="/blog" onClick={closeMobileMenu}>
             <BookOpen size={18} />
-            Blog
+            <span>Blog</span>
           </Link>
 
           <Link href="/ministries" onClick={closeMobileMenu}>
             <Users size={18} />
-            Ministries
+            <span>Ministries</span>
           </Link>
 
           <Link href="/events" onClick={closeMobileMenu}>
             <CalendarDays size={18} />
-            Events
+            <span>Events</span>
           </Link>
 
           <Link href="/contact" onClick={closeMobileMenu}>
             <Mail size={18} />
-            Contact
+            <span>Contact</span>
           </Link>
-
         </div>
       )}
     </header>
   );
 }
 
+
+3. app/about/page.tsx
+---------------------
+export default function AboutPage() {
+  return (
+    <main className="simple-page">
+      <section className="simple-page-hero">
+        <span className="eyebrow">ABOUT US</span>
+
+        <h1>About The Connect Church</h1>
+
+        <p>
+          Welcome to RCCG The Connect Church.
+          We are a community committed to connecting
+          people with God, His Word and one another.
+        </p>
+      </section>
+    </main>
+  );
+}
