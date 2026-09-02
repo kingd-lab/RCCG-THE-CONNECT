@@ -284,12 +284,11 @@ export default function HomePage() {
                 </span>
 
                 <h3>
-                  Leadership Conference
+                  Believer's Word  Conference
                 </h3>
 
                 <p>
-                  Equipping leaders with wisdom,
-                  strategy and kingdom influence.
+                  Equipping leaders with the word of God.
                 </p>
 
                 <button className="btn-primary event-btn">
