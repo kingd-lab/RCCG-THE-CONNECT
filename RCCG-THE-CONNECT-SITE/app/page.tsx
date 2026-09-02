@@ -1,44 +1,202 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
 export default function HomePage() {
 
-return (
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
     <main>
 
-    
-      {/* ================= HERO ================= */}
+      {/* =========================
+          NAVBAR
+      ========================= */}
+
+      <nav className="navbar">
+
+        <div className="container nav-content">
+
+          {/* LOGO */}
+          <div className="logo-wrap">
+
+            <img
+              src="/logo.png"
+              alt="The Connect Church"
+              className="logo-img"
+            />
+
+            <h1 className="logo">
+              The Connect Church
+            </h1>
+
+          </div>
+
+          {/* DESKTOP MENU */}
+          <div className="nav-links">
+
+            <a href="#">Home</a>
+
+            {/* ABOUT */}
+            <div className="dropdown">
+
+              <button className="dropdown-btn">
+                About
+              </button>
+
+              <div className="dropdown-content">
+
+                <a href="#">Our Story</a>
+                <a href="#">Leadership</a>
+                <a href="#">Vision</a>
+
+              </div>
+
+            </div>
+
+            {/* SERMONS */}
+            <div className="dropdown">
+
+              <button className="dropdown-btn">
+                Sermons
+              </button>
+
+              <div className="dropdown-content">
+
+                <a href="#">Latest Sermons</a>
+                <a href="#">Podcast</a>
+                <a href="#">Livestream</a>
+
+              </div>
+
+            </div>
+
+            <a href="#ministries">
+              Ministries
+            </a>
+
+            <a href="/blog">
+              Blog
+            </a>
+
+            <a href="#events">
+              Events
+            </a>
+
+            <a href="#">
+              Contact
+            </a>
+
+          </div>
+
+          {/* RIGHT */}
+          <div className="nav-right">
+
+            <button className="give-btn">
+              Give Online
+            </button>
+
+            {/* MOBILE BUTTON */}
+            <button
+              className="menu-btn"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+
+              {menuOpen ? "✕" : "☰"}
+
+            </button>
+
+          </div>
+
+        </div>
+
+        {/* MOBILE MENU */}
+
+        <div className={`mobile-menu ${menuOpen ? "show-menu" : ""}`}>
+
+          <a href="#">Home</a>
+
+          <details>
+
+            <summary>About</summary>
+
+            <div className="mobile-dropdown">
+
+              <a href="#">Our Story</a>
+              <a href="#">Leadership</a>
+              <a href="#">Vision</a>
+
+            </div>
+
+          </details>
+
+          <details>
+
+            <summary>Sermons</summary>
+
+            <div className="mobile-dropdown">
+
+              <a href="#">Latest Sermons</a>
+              <a href="#">Podcast</a>
+              <a href="#">Livestream</a>
+
+            </div>
+
+          </details>
+
+          <a href="#ministries">
+            Ministries
+          </a>
+
+          <a href="/blog">
+            Blog
+          </a>
+
+          <a href="#events">
+            Events
+          </a>
+
+          <a href="#">
+            Contact
+          </a>
+
+        </div>
+
+      </nav>
+
+      {/* =========================
+          HERO
+      ========================= */}
 
       <section className="hero">
 
+        <div className="hero-overlay"></div>
+
         <div className="hero-content">
 
-          <div className="hero-badge">
-            Welcome To RCCG The Connect Church
-          </div>
+          <span className="hero-badge">
+            RCCG • Worship • Community
+          </span>
 
           <h1>
-            Encounter God <br />
-            Experience <span>Transformation</span>
+            Experience The Presence
+            <span> Of God</span>
           </h1>
 
           <p>
-            A place of worship, spiritual growth,
-            community impact and life-changing encounters
-            with God's presence.
+            A modern worship experience built around faith,
+            transformation, community and spiritual growth.
           </p>
 
           <div className="hero-buttons">
 
-            <button className="btn-primary">
-              Join Us Sunday
-            </button>
+            <a href="#" className="btn-primary">
+              Watch Live
+            </a>
 
-            <Link href="/blog" className="btn-secondary">
-              Church Community
-            </Link>
+            <a href="#" className="btn-secondary">
+              Join Sunday Service
+            </a>
 
           </div>
 
@@ -46,11 +204,13 @@ return (
 
       </section>
 
-      {/* ================= MINISTRIES ================= */}
+      {/* =========================
+          MINISTRIES
+      ========================= */}
 
       <section
-        className="section"
         id="ministries"
+        className="section"
       >
 
         <div className="container">
@@ -63,7 +223,7 @@ return (
 
             <p>
               Empowering lives through worship,
-              discipleship, outreach and prayer.
+              leadership and spiritual growth.
             </p>
 
           </div>
@@ -72,54 +232,39 @@ return (
 
             <div className="ministry-card">
 
-              <img
-                src="/ministry1.jpg"
-                alt=""
-                className="card-image"
-              />
-
               <h3>
                 Youth Ministry
               </h3>
 
               <p>
-                Raising spiritually strong and purpose-driven youths.
+                Raising kingdom-minded young people through
+                worship, mentorship and discipleship.
               </p>
 
             </div>
 
             <div className="ministry-card">
-
-              <img
-                src="/ministry2.jpg"
-                alt=""
-                className="card-image"
-              />
-
-              <h3>
-                Worship Ministry
-              </h3>
-
-              <p>
-                Creating worship encounters that draw people to God.
-              </p>
-
-            </div>
-
-            <div className="ministry-card">
-
-              <img
-                src="/ministry3.jpg"
-                alt=""
-                className="card-image"
-              />
 
               <h3>
                 Prayer Ministry
               </h3>
 
               <p>
-                Standing in intercession for families and nations.
+                Standing in prayer and intercession
+                for transformation and breakthrough.
+              </p>
+
+            </div>
+
+            <div className="ministry-card">
+
+              <h3>
+                Worship Team
+              </h3>
+
+              <p>
+                Creating powerful worship encounters
+                that lead people into God’s presence.
               </p>
 
             </div>
@@ -130,53 +275,13 @@ return (
 
       </section>
 
-      {/* ================= WORSHIP MOMENTS ================= */}
-
-      <section className="section">
-
-        <div className="container">
-
-          <div className="section-title">
-
-            <h2>
-              Worship Moments
-            </h2>
-
-            <p>
-              Experience moments of worship and spiritual encounters.
-            </p>
-
-          </div>
-
-          <div className="home-gallery-grid">
-
-            <div className="home-gallery-item">
-              <img src="/gallery1.jpg" alt="" />
-            </div>
-
-            <div className="home-gallery-item">
-              <img src="/gallery2.jpg" alt="" />
-            </div>
-
-            <div className="home-gallery-item">
-              <img src="/gallery3.jpg" alt="" />
-            </div>
-
-            <div className="home-gallery-item">
-              <img src="/gallery4.jpg" alt="" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* ================= EVENTS ================= */}
+      {/* =========================
+          EVENTS
+      ========================= */}
 
       <section
-        className="section"
         id="events"
+        className="section"
       >
 
         <div className="container">
@@ -189,119 +294,54 @@ return (
 
             <p>
               Stay connected with conferences,
-              worship nights and church programs.
+              worship nights and church gatherings.
             </p>
 
           </div>
 
-          <div className="event-grid">
+          <div className="events-grid">
 
-            {/* EVENT 1 */}
             <div className="event-card">
 
-              <div className="event-image-wrap">
-
-                <img
-                  src="/event1.jpg"
-                  alt=""
-                  className="event-image"
-                />
-
-              </div>
+              <img
+                src="/event1.jpg"
+                alt="Event"
+                className="event-image"
+              />
 
               <div className="event-content">
-
-                <span className="event-date">
-                  Every Sunday • 8:00 AM
-                </span>
-
-                <h3>
-                  Sunday Worship Experience
-                </h3>
-
-                <p>
-                  Join powerful worship, prayer,
-                  teachings and fellowship.
-                </p>
-
-                <button className="btn-primary event-btn">
-                  Learn More
-                </button>
-
-              </div>
-
-            </div>
-
-            {/* EVENT 2 */}
-            <div className="event-card">
-
-              <div className="event-image-wrap">
-
-                <img
-                  src="/event2.jpg"
-                  alt=""
-                  className="event-image"
-                />
-
-              </div>
-
-              <div className="event-content">
-
-                <span className="event-date">
-                  Friday • 9:00 PM
-                </span>
 
                 <h3>
                   Night of Worship
                 </h3>
 
                 <p>
-                  A night of worship, revival
-                  and supernatural encounters.
+                  Friday • 9PM • A powerful atmosphere
+                  of worship and prayer encounter.
                 </p>
-
-                <Link
-                      href="/events/night-of-worship"
-                           className="btn-primary event-btn"
-                            >
-                                     Learn More
-                                           </Link>
 
               </div>
 
             </div>
 
-            {/* EVENT 3 */}
             <div className="event-card">
 
-              <div className="event-image-wrap">
-
-                <img
-                  src="/event3.jpg"
-                  alt=""
-                  className="event-image"
-                />
-
-              </div>
+              <img
+                src="/event2.jpg"
+                alt="Event"
+                className="event-image"
+              />
 
               <div className="event-content">
-
-                <span className="event-date">
-                  May 25 • 10:00 AM
-                </span>
 
                 <h3>
                   Leadership Conference
                 </h3>
 
                 <p>
-                  Equipping leaders with wisdom,
-                  strategy and kingdom influence.
+                  Equipping believers for kingdom impact,
+                  influence and spiritual leadership.
                 </p>
-
-                <button className="btn-primary event-btn">
-                  Learn More
-                </button>
 
               </div>
 
@@ -313,105 +353,132 @@ return (
 
       </section>
 
-      {/* ================= FOOTER ================= */}
+      {/* =========================
+          GALLERY
+      ========================= */}
 
-      <footer
-        className="footer"
-        id="footer"
-      >
+      <section className="section">
 
-        <div className="container footer-grid">
+        <div className="container">
 
-          <div>
+          <div className="section-title">
 
-            <h3>
-              RCCG The Connect Church
-            </h3>
+            <h2>
+              Moments In Worship
+            </h2>
 
             <p>
-              Building lives through God's word,
-              worship and kingdom impact.
+              Experience the atmosphere, worship
+              and community life at The Connect Church.
             </p>
 
           </div>
 
-          <div>
+          <div className="gallery-grid">
 
-            <h3>
-              Quick Links
-            </h3>
+            <div className="gallery-item">
+              <img src="/church1.jpg" alt="Church" />
+            </div>
 
-            <ul>
+            <div className="gallery-item">
+              <img src="/church2.jpg" alt="Church" />
+            </div>
 
-              <li>Home</li>
-              <li>Ministries</li>
-              <li>Events</li>
-              <li>Blog</li>
+            <div className="gallery-item">
+              <img src="/church3.jpg" alt="Church" />
+            </div>
 
-            </ul>
-
-          </div>
-
-          <div>
-
-            <h3>
-              Service Times
-            </h3>
-
-            <ul>
-
-              <li>Sunday — 1PM</li>
-              <li>Wednesday — 6PM</li>
-              <li>Saturday Prayer — 10AM</li>
-
-            </ul>
+            <div className="gallery-item">
+              <img src="/church4.jpg" alt="Church" />
+            </div>
 
           </div>
-
-          <div>
-
-            <h3>
-             Contact
-            </h3>
-
-            <ul>
-    <html lang="en">
-
-              <li>Lagos, Nigeria</li>
-              <li>rccgtheconnectchurch@gmail.com</li>
-              <li>+234 0816950684</li>
-      <head>
-
-            </ul>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-
-          </div>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
 
         </div>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
 
-        <div className="footer-bottom">
-          © 2026 RCCG The Connect Church.
+      </section>
+
+      {/* =========================
+          FOOTER
+      ========================= */}
+
+      <footer className="footer">
+
+        <div className="container">
+
+          <div className="footer-grid">
+
+            <div>
+
+              <h3>
+                The Connect Church
+              </h3>
+
+              <p>
+                Building a Christ-centered digital worship experience.
+              </p>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Quick Links
+              </h3>
+
+              <ul>
+
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Sermons</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Service Times
+              </h3>
+
+              <ul>
+
+                <li>Sunday • 8AM</li>
+                <li>Wednesday • 6PM</li>
+                <li>Friday Prayer • 9PM</li>
+
+              </ul>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Connect
+              </h3>
+
+              <ul>
+
+                <li>Instagram</li>
+                <li>YouTube</li>
+                <li>Facebook</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div className="footer-bottom">
+            © 2026 The Connect Church. All rights reserved.
+          </div>
+
         </div>
-      </head>
 
       </footer>
-      <body>
-        {children}
-      </body>
 
     </main>
-    </html>
-);
+  );
 }
