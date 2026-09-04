@@ -366,7 +366,7 @@ export default function HomePage() {
               <div className="event-content">
 
                 <span className="event-date">
-                  Every Sunday • 8:00 AM
+                  Every Sunday • 1:00 pm
                 </span>
 
                 <h3>
