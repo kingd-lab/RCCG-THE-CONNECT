@@ -494,22 +494,40 @@ export default function HomePage() {
           </div>
 
           <div>
+  <h3>Quick Links</h3>
 
-            <h3>
-              Quick Links
-            </h3>
+  <ul className="footer-links">
+    <li>
+      <Link href="/">
+        Home
+      </Link>
+    </li>
 
-            <ul>
+    <li>
+      <Link href="/#ministries">
+        Ministries
+      </Link>
+    </li>
 
-              <li>Home</li>
-              <li>Ministries</li>
-              <li>Events</li>
-              <li>Blog</li>
+    <li>
+      <Link href="/#events">
+        Events
+      </Link>
+    </li>
 
-            </ul>
+    <li>
+      <Link href="/sermons">
+        Sermons
+      </Link>
+    </li>
 
-          </div>
-
+    <li>
+      <Link href="/blog">
+        Blog
+      </Link>
+    </li>
+  </ul>
+</div>
           <div>
 
             <h3>
