@@ -87,82 +87,76 @@ export default async function BlogPage() {
             }}
           >
 
+{/* =================================================
+    ARTICLE 1
+================================================= */}
 
-            {/* =================================================
-                ARTICLE 1
-            ================================================= */}
+<div
+  style={{
+    background: "#0d0d0d",
+    border: "1px solid #1f2937",
+    borderRadius: "28px",
+    overflow: "hidden",
+    transition: "0.4s ease",
+  }}
+>
 
-            <div
-              style={{
-                background: "#0d0d0d",
-                border: "1px solid #1f2937",
-                borderRadius: "28px",
-                overflow: "hidden",
-                transition: "0.4s ease",
-              }}
-            >
+  <img
+    src="/blog1.jpg"
+    alt="I'll Never Be Small"
+    style={{
+      width: "100%",
+      height: "260px",
+      objectFit: "cover",
+    }}
+  />
 
-              <img
-                src="/blog1.jpg"
-                alt="Sacrifices Aren't Always Convenient"
-                style={{
-                  width: "100%",
-                  height: "260px",
-                  objectFit: "cover",
-                }}
-              />
+  <div style={{ padding: "30px" }}>
 
+    <span
+      style={{
+        color: "#8bffb0",
+        fontSize: "13px",
+        fontWeight: "700",
+      }}
+    >
+      Notes By Sis Joy
+    </span>
 
-              <div style={{ padding: "30px" }}>
+    <h3
+      style={{
+        fontSize: "28px",
+        marginTop: "14px",
+        marginBottom: "16px",
+        lineHeight: "1.25",
+      }}
+    >
+      I&apos;ll Never Be Small
+    </h3>
 
-                <span
-                  style={{
-                    color: "#8bffb0",
-                    fontSize: "13px",
-                    fontWeight: "700",
-                  }}
-                >
-                  Notes By Sis Joy
-                </span>
+    <p
+      style={{
+        color: "#9ca3af",
+        lineHeight: "1.8",
+        marginBottom: "24px",
+      }}
+    >
+      I may be in a small place, but I serve a great God.
+      Little in the hands of God is never insignificant.
+      I will remain faithful in the little, grow through
+      the process, and trust God with the increase.
+    </p>
 
+    <Link
+      href="/blog/ill-never-be-small"
+      className="btn-primary read-more-btn"
+    >
+      Read More
+    </Link>
 
-                <h3
-                  style={{
-                    fontSize: "28px",
-                    marginTop: "14px",
-                    marginBottom: "16px",
-                    lineHeight: "1.25",
-                  }}
-                >
-                  Sacrifices Aren&apos;t Always Convenient
-                </h3>
+  </div>
 
-
-                <p
-                  style={{
-                    color: "#9ca3af",
-                    lineHeight: "1.8",
-                    marginBottom: "24px",
-                  }}
-                >
-                  You&apos;re not there yet, and that&apos;s okay.
-                  Growth is a journey, not a sudden arrival.
-                  Becoming who God has called you to be takes
-                  faith, obedience and perseverance.
-                </p>
-
-
-                <Link
-                  href="/blog/sacrifices-arent-always-convenient"
-                  className="btn-primary read-more-btn"
-                >
-                  Read More
-                </Link>
-
-              </div>
-
-            </div>
-
+</div>
 
             {/* =================================================
                 ARTICLE 2
