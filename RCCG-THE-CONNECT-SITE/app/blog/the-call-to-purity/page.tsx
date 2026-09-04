@@ -177,8 +177,8 @@ export default function TheCallToPurityPage() {
 
               {/* SIGNATURE */}
               <div className="purity-signature">
-                PROPHETIC SPOKEN WORD: THE CALL TO PURITY <br> by Bro Omosehin Victor 
-                </br>
+                PROPHETIC SPOKEN WORD: THE CALL TO PURITY by Bro Omosehin Victor 
+                
               
               </div>
 
