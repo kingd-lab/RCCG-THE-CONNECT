@@ -247,40 +247,6 @@ button {
 }
 
 
-/* =====================================================
-   GIVE ONLINE
-===================================================== */
-
-.give-btn {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 12px 22px;
-
-  background: #8bffb0;
-
-  color: #000;
-
-  border-radius: 14px;
-
-  font-size: 16px;
-  font-weight: 700;
-
-  white-space: nowrap;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-
-.give-btn:hover {
-  background: #73f69d;
-
-  transform: translateY(-2px);
-}
 
 
 /* =====================================================
@@ -1367,28 +1333,7 @@ button {
   }
 
 
-  /* MOBILE GIVE ONLINE */
-
-  .give-btn {
-    display: inline-flex;
-
-    width: auto;
-
-    padding: 7px 10px;
-
-    background: #8bffb0;
-
-    color: #000;
-
-    border-radius: 9px;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-  }
-
+ 
 
   /* MOBILE MENU BUTTON */
 
@@ -1645,16 +1590,6 @@ button {
     font-size: 10px;
   }
 
-
-  /* GIVE ONLINE */
-
-  .give-btn {
-    padding: 6px 8px;
-
-    border-radius: 8px;
-
-    font-size: 10px;
-  }
 
 
   /* MENU */
