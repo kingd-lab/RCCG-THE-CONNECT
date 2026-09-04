@@ -120,10 +120,6 @@ export default function HomePage() {
           {/* RIGHT */}
           <div className="nav-right">
 
-            <button className="give-btn">
-              Give Online
-            </button>
-
             <button
               className="menu-btn"
               onClick={() => setMenuOpen(!menuOpen)}
