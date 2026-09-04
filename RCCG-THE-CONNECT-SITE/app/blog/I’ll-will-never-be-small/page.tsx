@@ -21,11 +21,11 @@ export default function ArticlePage() {
             </span>
 
             <h1>
-              Sacrifices Aren&apos;t Always Convenient
+              I&apos;ll Never Be Small
             </h1>
 
             <p className="full-article-subtitle">
-              It&apos;s a covenant.
+              Little in the hands of God is never insignificant.
             </p>
 
           </header>
@@ -41,7 +41,7 @@ export default function ArticlePage() {
 
                 <img
                   src="/blog1.jpg"
-                  alt="Sacrifices aren't always convenient. It's a covenant."
+                  alt="I'll Never Be Small"
                   className="full-article-image"
                 />
 
@@ -54,7 +54,8 @@ export default function ArticlePage() {
                 </span>
 
                 <p>
-                  Faith, obedience and daily Christian living.
+                  Faith, growth, purpose and becoming everything
+                  God has called you to be.
                 </p>
 
               </div>
@@ -66,65 +67,51 @@ export default function ArticlePage() {
             <div className="full-article-body">
 
               <p className="full-article-lead">
-                Sacrifices aren&apos;t always convenient.
-                It&apos;s a covenant.
+                I refuse to believe that my life will be reduced
+                to what I can currently see.
               </p>
 
               <p>
-                We often think of sacrifice as something optional,
-                something we give when it&apos;s easy. But true
-                sacrifice is rarely convenient. It&apos;s not about
-                comfort, it&apos;s about covenant.
+                I may be in a small place, but I serve a great God.
+                I may be starting with little, but little in the
+                hands of God is never insignificant.
               </p>
 
               <p>
-                If sacrifice were easy, Abel wouldn&apos;t have been
-                killed. His offering was accepted by God, not because
-                it was convenient, but because it cost him something
-                real.
+                I will not despise my beginning, because I know
+                that God can take what looks small and make it great.
               </p>
 
               <p>
-                And that cost stirred up hatred in the heart of his
-                brother, Cain. Why? Because true sacrifice exposes
-                false ones. Genuine obedience makes half-hearted
-                devotion uncomfortable.
+                I refuse to let where I am convince me that this
+                is all I will ever become.
               </p>
 
               <p>
-                Real sacrifice carries a price that reaches heaven,
-                and sometimes stirs resistance on earth.
+                There is still more in me, more to learn, more to
+                build, more to give, more to become.
               </p>
 
               <p>
-                Don&apos;t expect your sacrifice to be celebrated by
-                everyone. Don&apos;t expect it to always make sense.
+                I will not shrink myself because others are
+                uncomfortable with my growth. I will not apologize
+                for becoming everything God has called me to be.
               </p>
 
               <p>
-                Sacrifice, by nature, costs. It stretches you. It pulls
-                on your time, your energy, your pride, your resources.
+                I will remain faithful in the little, grow through
+                the process, and trust God with the increase.
               </p>
 
               <p>
-                But it ties you to something deeper, covenant.
+                I don&apos;t need to prove my greatness to anyone.
+                I only need to become who God created me to be.
               </p>
 
-              <p>
-                Not just what you do for God, but what you do because
-                you belong to Him.
-              </p>
-
-              <p>
-                So give even when it&apos;s hard. Serve even when no
-                one claps. Lay it down, not for recognition, but for
-                reverence, because heaven responds to what&apos;s
-                costly.
-              </p>
-
-              <p>
-                God honors what&apos;s born out of covenant,
-                not convenience.
+              <p className="article-highlight">
+                I&apos;ll never be small, not because I have
+                everything, but because I know there is more that
+                God has placed inside me.
               </p>
 
 
@@ -384,6 +371,31 @@ export default function ArticlePage() {
 
 
         /* =========================================
+           HIGHLIGHT
+        ========================================= */
+
+        .article-highlight {
+          color: #ffffff;
+
+          font-size: 22px;
+
+          font-weight: 600;
+
+          line-height: 1.7;
+
+          margin-top: 35px !important;
+
+          padding: 24px 26px;
+
+          background: rgba(139,255,176,0.06);
+
+          border-left: 4px solid #8bffb0;
+
+          border-radius: 0 16px 16px 0;
+        }
+
+
+        /* =========================================
            SIGNATURE
         ========================================= */
 
@@ -573,6 +585,15 @@ export default function ArticlePage() {
             padding-bottom: 20px;
 
             margin-bottom: 25px !important;
+          }
+
+
+          .article-highlight {
+            font-size: 18px;
+
+            padding: 20px;
+
+            margin-top: 30px !important;
           }
 
 
