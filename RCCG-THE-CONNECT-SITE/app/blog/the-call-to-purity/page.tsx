@@ -50,7 +50,7 @@ export default function TheCallToPurityPage() {
               <div className="purity-image-note">
 
                 <span>
-                  Prophetic Spoken Word
+                  Prophetic Spoken Word 
                 </span>
 
                 <p>
@@ -178,6 +178,7 @@ export default function TheCallToPurityPage() {
               {/* SIGNATURE */}
               <div className="purity-signature">
                 PROPHETIC SPOKEN WORD: THE CALL TO PURITY
+                by Bro Omosehin Victor 
               </div>
 
             </div>
