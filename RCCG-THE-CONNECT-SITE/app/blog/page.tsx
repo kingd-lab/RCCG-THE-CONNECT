@@ -1,12 +1,17 @@
-"use client";
-
 import Link from "next/link";
+import { getOpenHeavens } from "@/lib/getOpenHeavens";
 
-export default function BlogPage() {
+export default async function BlogPage() {
+
+  const devotionals = await getOpenHeavens(3);
+
   return (
     <main className="bg-[#050505] text-white overflow-hidden">
 
-      {/* HERO SECTION */}
+      {/* =====================================================
+          HERO SECTION
+      ===================================================== */}
+
       <section className="hero">
 
         <div className="hero-content">
@@ -27,13 +32,19 @@ export default function BlogPage() {
 
           <div className="hero-buttons">
 
-            <Link href="/" className="btn-primary">
+            <Link
+              href="/"
+              className="btn-primary"
+            >
               Back Home
             </Link>
 
-            <button className="btn-secondary">
+            <a
+              href="#latest-articles"
+              className="btn-secondary"
+            >
               Explore Articles
-            </button>
+            </a>
 
           </div>
 
@@ -41,8 +52,15 @@ export default function BlogPage() {
 
       </section>
 
-      {/* CHRONICLES SECTION */}
-      <section className="section">
+
+      {/* =====================================================
+          LATEST ARTICLES
+      ===================================================== */}
+
+      <section
+        className="section"
+        id="latest-articles"
+      >
 
         <div className="container">
 
@@ -53,20 +71,27 @@ export default function BlogPage() {
             </h2>
 
             <p>
-              Fresh teachings and inspiration from RCCG The Connect Church.
+              Fresh teachings and inspiration from
+              RCCG The Connect Church.
             </p>
 
           </div>
 
+
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+              gridTemplateColumns:
+                "repeat(auto-fit,minmax(320px,1fr))",
               gap: "30px",
             }}
           >
 
-            {/* CARD 1 */}
+
+            {/* =================================================
+                ARTICLE 1
+            ================================================= */}
+
             <div
               style={{
                 background: "#0d0d0d",
@@ -79,13 +104,14 @@ export default function BlogPage() {
 
               <img
                 src="/blog1.jpg"
-                alt=""
+                alt="Sacrifices Aren't Always Convenient"
                 style={{
                   width: "100%",
                   height: "260px",
                   objectFit: "cover",
                 }}
               />
+
 
               <div style={{ padding: "30px" }}>
 
@@ -99,15 +125,18 @@ export default function BlogPage() {
                   Notes By Sis Joy
                 </span>
 
+
                 <h3
                   style={{
                     fontSize: "28px",
                     marginTop: "14px",
                     marginBottom: "16px",
+                    lineHeight: "1.25",
                   }}
                 >
-                 sacrifices arent always convenient
+                  Sacrifices Aren&apos;t Always Convenient
                 </h3>
+
 
                 <p
                   style={{
@@ -116,39 +145,49 @@ export default function BlogPage() {
                     marginBottom: "24px",
                   }}
                 >
-                  You're not there yet, And that's okay. Growth is a journey, not a sudden arrival. becoming who God.....
+                  You&apos;re not there yet, and that&apos;s okay.
+                  Growth is a journey, not a sudden arrival.
+                  Becoming who God has called you to be takes
+                  faith, obedience and perseverance.
                 </p>
 
-               <Link
-  href="/blog/sacrifices-arent-always-convenient"
-  className="btn-primary read-more-btn"
->
-  Read More
-</Link>
+
+                <Link
+                  href="/blog/sacrifices-arent-always-convenient"
+                  className="btn-primary read-more-btn"
+                >
+                  Read More
+                </Link>
 
               </div>
 
             </div>
 
-            {/* CARD 2 */}
+
+            {/* =================================================
+                ARTICLE 2
+            ================================================= */}
+
             <div
               style={{
                 background: "#0d0d0d",
                 border: "1px solid #1f2937",
                 borderRadius: "28px",
                 overflow: "hidden",
+                transition: "0.4s ease",
               }}
             >
 
               <img
                 src="/blog2.jpg"
-                alt=""
+                alt="The Call To Purity"
                 style={{
                   width: "100%",
                   height: "260px",
                   objectFit: "cover",
                 }}
               />
+
 
               <div style={{ padding: "30px" }}>
 
@@ -159,18 +198,21 @@ export default function BlogPage() {
                     fontWeight: "700",
                   }}
                 >
-                Prophetic Spoken Word
+                  Prophetic Spoken Word
                 </span>
+
 
                 <h3
                   style={{
                     fontSize: "28px",
                     marginTop: "14px",
                     marginBottom: "16px",
+                    lineHeight: "1.25",
                   }}
                 >
-                The call to purity
+                  The Call To Purity
                 </h3>
+
 
                 <p
                   style={{
@@ -179,42 +221,49 @@ export default function BlogPage() {
                     marginBottom: "24px",
                   }}
                 >
-                 Purity…
-                  They say it is old-fashioned.
-                   They say it is for another generation,
-                    for another era,
-                     for people who do not understand “real life.”
+                  Purity is not old-fashioned.
+                  It is prophetic. A call to holiness,
+                  discipline and standing apart in a
+                  compromising world.
                 </p>
 
-                  <Link
-                     href="/blog/the-call-to-purity"
-                     className="btn-primary read-more-btn"
-                        >
-                          Read More
-                            </Link>
+
+                <Link
+                  href="/blog/the-call-to-purity"
+                  className="btn-primary read-more-btn"
+                >
+                  Read More
+                </Link>
+
               </div>
 
             </div>
 
-            {/* CARD 3 */}
+
+            {/* =================================================
+                ARTICLE 3
+            ================================================= */}
+
             <div
               style={{
                 background: "#0d0d0d",
                 border: "1px solid #1f2937",
                 borderRadius: "28px",
                 overflow: "hidden",
+                transition: "0.4s ease",
               }}
             >
 
               <img
                 src="/blog3.jpg"
-                alt=""
+                alt="Miracles and Breakthroughs"
                 style={{
                   width: "100%",
                   height: "260px",
                   objectFit: "cover",
                 }}
               />
+
 
               <div style={{ padding: "30px" }}>
 
@@ -228,15 +277,18 @@ export default function BlogPage() {
                   Testimonies
                 </span>
 
+
                 <h3
                   style={{
                     fontSize: "28px",
                     marginTop: "14px",
                     marginBottom: "16px",
+                    lineHeight: "1.25",
                   }}
                 >
-                  Miracles & Breakthroughs
+                  Miracles &amp; Breakthroughs
                 </h3>
+
 
                 <p
                   style={{
@@ -245,11 +297,15 @@ export default function BlogPage() {
                     marginBottom: "24px",
                   }}
                 >
-                  Inspiring testimonies revealing God's faithfulness
-                  and supernatural transformation.
+                  Inspiring testimonies revealing
+                  God&apos;s faithfulness and supernatural
+                  transformation in the lives of His people.
                 </p>
 
-                <button className="btn-primary">
+
+                <button
+                  className="btn-primary"
+                >
                   Read More
                 </button>
 
@@ -263,217 +319,250 @@ export default function BlogPage() {
 
       </section>
 
-      {/* WEEKLY DEVOTION SECTION */}
+
+      {/* =====================================================
+          RCCG OPEN HEAVENS
+      ===================================================== */}
+
       <section className="section">
 
         <div className="container">
 
           <div className="section-title">
 
+            <span
+              style={{
+                display: "block",
+                color: "#8bffb0",
+                fontSize: "14px",
+                fontWeight: "700",
+                marginBottom: "10px",
+                letterSpacing: "1px",
+              }}
+            >
+              RCCG OPEN HEAVENS
+            </span>
+
+
             <h2>
-              Weekly Devotion
+              Daily Devotion
             </h2>
 
+
             <p>
-              Strengthen faith through powerful teachings,
-              encouragement, and weekly spiritual insights.
+              Stay spiritually refreshed with the latest
+              Open Heavens daily devotionals.
             </p>
 
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
-              gap: "30px",
-            }}
-          >
 
-            {/* CARD 1 */}
+          {/* =================================================
+              DEVOTIONALS AVAILABLE
+          ================================================= */}
+
+          {devotionals.length > 0 ? (
+
             <div
               style={{
-                background: "#0d0d0d",
-                border: "1px solid #1f2937",
-                borderRadius: "28px",
-                overflow: "hidden",
-                transition: "0.4s ease",
+                display: "grid",
+
+                gridTemplateColumns:
+                  "repeat(auto-fit,minmax(280px,1fr))",
+
+                gap: "30px",
               }}
             >
 
-              <img
-                src="/devotion1.jpg"
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "240px",
-                  objectFit: "cover",
-                }}
-              />
+              {devotionals.map((devotional, index) => (
 
-              <div style={{ padding: "30px" }}>
-
-                <span
+                <div
+                  key={devotional.link}
                   style={{
-                    color: "#8bffb0",
-                    fontSize: "13px",
-                    fontWeight: "700",
+                    background: "#0d0d0d",
+
+                    border:
+                      "1px solid #1f2937",
+
+                    borderRadius: "28px",
+
+                    overflow: "hidden",
+
+                    transition: "0.4s ease",
                   }}
                 >
-                  Spiritual Growth
-                </span>
 
-                <h3
-                  style={{
-                    fontSize: "26px",
-                    marginTop: "14px",
-                    marginBottom: "16px",
-                  }}
-                >
-                  Walking Daily With God
-                </h3>
 
-                <p
-                  style={{
-                    color: "#9ca3af",
-                    lineHeight: "1.8",
-                    marginBottom: "24px",
-                  }}
-                >
-                  Discover how consistency in prayer,
-                  worship, and faith transforms spiritual life.
-                </p>
+                  {/* DEVOTIONAL IMAGE */}
 
-                <button className="btn-primary">
-                  Read More
-                </button>
+                  <img
+                    src={
+                      index === 0
+                        ? "/devotion1.jpg"
+                        : index === 1
+                        ? "/devotion2.jpg"
+                        : "/devotion3.jpg"
+                    }
+                    alt="RCCG Open Heavens Daily Devotional"
+                    style={{
+                      width: "100%",
+                      height: "240px",
+                      objectFit: "cover",
+                    }}
+                  />
 
-              </div>
+
+                  {/* DEVOTIONAL CONTENT */}
+
+                  <div
+                    style={{
+                      padding: "30px",
+                    }}
+                  >
+
+                    <span
+                      style={{
+                        color: "#8bffb0",
+
+                        fontSize: "13px",
+
+                        fontWeight: "700",
+                      }}
+                    >
+                      {index === 0
+                        ? "TODAY'S DEVOTIONAL"
+                        : "OPEN HEAVENS"}
+                    </span>
+
+
+                    <h3
+                      style={{
+                        color: "white",
+
+                        fontSize: "25px",
+
+                        lineHeight: "1.3",
+
+                        marginTop: "14px",
+
+                        marginBottom: "14px",
+                      }}
+                    >
+                      {devotional.title}
+                    </h3>
+
+
+                    <p
+                      style={{
+                        color: "#8bffb0",
+
+                        fontSize: "13px",
+
+                        marginBottom: "18px",
+                      }}
+                    >
+                      {devotional.date}
+                    </p>
+
+
+                    <p
+                      style={{
+                        color: "#9ca3af",
+
+                        lineHeight: "1.8",
+
+                        marginBottom: "24px",
+                      }}
+                    >
+                      Strengthen your walk with God through
+                      today&apos;s Open Heavens devotional,
+                      biblical teaching and spiritual
+                      encouragement.
+                    </p>
+
+
+                    <a
+                      href={devotional.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      Read Devotional
+                    </a>
+
+                  </div>
+
+                </div>
+
+              ))}
 
             </div>
 
-            {/* CARD 2 */}
+          ) : (
+
+            /* =================================================
+                FALLBACK IF FEED DOES NOT LOAD
+            ================================================= */
+
             <div
               style={{
+                maxWidth: "650px",
+
+                margin: "0 auto",
+
+                padding: "40px",
+
+                textAlign: "center",
+
                 background: "#0d0d0d",
-                border: "1px solid #1f2937",
+
+                border:
+                  "1px solid #1f2937",
+
                 borderRadius: "28px",
-                overflow: "hidden",
               }}
             >
 
-              <img
-                src="/devotion2.jpg"
-                alt=""
+              <h3
                 style={{
-                  width: "100%",
-                  height: "240px",
-                  objectFit: "cover",
+                  color: "white",
+
+                  fontSize: "28px",
+
+                  marginBottom: "16px",
                 }}
-              />
+              >
+                Open Heavens Daily Devotional
+              </h3>
 
-              <div style={{ padding: "30px" }}>
 
-                <span
-                  style={{
-                    color: "#8bffb0",
-                    fontSize: "13px",
-                    fontWeight: "700",
-                  }}
-                >
-                  Prayer & Faith
-                </span>
+              <p
+                style={{
+                  color: "#9ca3af",
 
-                <h3
-                  style={{
-                    fontSize: "26px",
-                    marginTop: "14px",
-                    marginBottom: "16px",
-                  }}
-                >
-                  The Power of Prayer
-                </h3>
+                  lineHeight: "1.8",
 
-                <p
-                  style={{
-                    color: "#9ca3af",
-                    lineHeight: "1.8",
-                    marginBottom: "24px",
-                  }}
-                >
-                  Learn how prayer strengthens believers
-                  and opens doors for breakthroughs.
-                </p>
+                  marginBottom: "25px",
+                }}
+              >
+                The latest Open Heavens devotional
+                is temporarily unavailable.
+                Please check again shortly.
+              </p>
 
-                <button className="btn-primary">
-                  Read More
-                </button>
 
-              </div>
+              <a
+                href="https://rccglive.com/open-heaven/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Visit Open Heavens
+              </a>
 
             </div>
 
-            {/* CARD 3 */}
-            <div
-              style={{
-                background: "#0d0d0d",
-                border: "1px solid #1f2937",
-                borderRadius: "28px",
-                overflow: "hidden",
-              }}
-            >
-
-              <img
-                src="/devotion3.jpg"
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "240px",
-                  objectFit: "cover",
-                }}
-              />
-
-              <div style={{ padding: "30px" }}>
-
-                <span
-                  style={{
-                    color: "#8bffb0",
-                    fontSize: "13px",
-                    fontWeight: "700",
-                  }}
-                >
-                  Testimonies
-                </span>
-
-                <h3
-                  style={{
-                    fontSize: "26px",
-                    marginTop: "14px",
-                    marginBottom: "16px",
-                  }}
-                >
-                  Faith That Inspires
-                </h3>
-
-                <p
-                  style={{
-                    color: "#9ca3af",
-                    lineHeight: "1.8",
-                    marginBottom: "24px",
-                  }}
-                >
-                  Powerful testimonies showing God's goodness,
-                  miracles, and restoration in lives.
-                </p>
-
-                <button className="btn-primary">
-                  Read More
-                </button>
-
-              </div>
-
-            </div>
-
-          </div>
+          )}
 
         </div>
 
